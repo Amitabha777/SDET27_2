@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Test-Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.crm.autodesk.concttest.CreateContctTest">
+        <methods>
+          <include name="logOutOfApp"/>
+          <include name="loginToApp"/>
+          <include name="demo"/>
+          <include name="contactCreate"/>
+          <include name="dbConnection"/>
+          <include name="launchBrowser"/>
+          <include name="closeDbConnection"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.crm.autodesk.concttest.CreateContctTest -->
+    </classes>
+  </test> <!-- Test-Chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
