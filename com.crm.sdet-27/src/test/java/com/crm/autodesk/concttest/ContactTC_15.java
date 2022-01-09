@@ -24,7 +24,7 @@ import com.crm.autodesk.objectrepository.SearchOrganisationPage;
 
 public class ContactTC_15 extends BaseClass{
 
-	@Test
+	@Test(groups="RegressionSuite")
 	public void tc15() throws Throwable {
 		
 		

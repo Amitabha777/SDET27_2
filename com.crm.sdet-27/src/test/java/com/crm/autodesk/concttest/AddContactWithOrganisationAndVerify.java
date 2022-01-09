@@ -27,7 +27,7 @@ public class AddContactWithOrganisationAndVerify extends BaseClass{
  */
 	
 					
-		@Test
+		@Test(groups="RegressionSuite")
 		public void contactWithOrganisation() throws Throwable
 		{
 
@@ -71,6 +71,11 @@ public class AddContactWithOrganisationAndVerify extends BaseClass{
 		
 		//Handling Explicit Wait
 		organisationInformationPage.headerTextVisibility(driver,"visibilityof");
+		
+		//homePage =null;
+		
+		//Alternate Solution To Handle Stale Element Exception
+		//HomePage home= new HomePage(driver);
 		
 		//Go To Contacts Page
 		homePage.clickOnContactsLink();

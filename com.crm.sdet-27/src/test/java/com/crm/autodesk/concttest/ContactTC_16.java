@@ -8,7 +8,7 @@ import com.crm.autodesk.objectrepository.HomePage;
 
 public class ContactTC_16 extends BaseClass{
 
-	@Test 
+	@Test(groups="RegressionSuite") 
 	public void test16()
 	{
 		

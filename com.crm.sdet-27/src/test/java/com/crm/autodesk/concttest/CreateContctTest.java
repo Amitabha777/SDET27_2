@@ -10,7 +10,7 @@ import com.crm.autodesk.objectrepository.HomePage;
 
 public class CreateContctTest extends BaseClass{
 
-	@Test(groups="smokeSuite")
+	@Test(groups="SmokeSuite")
 	public void contactCreate() throws Throwable
 	{
 		
@@ -48,7 +48,7 @@ public class CreateContctTest extends BaseClass{
 		
 	}
 	
-	@Test
+	@Test(groups="SmokeSuite")
 	public void demo()
 	{
 		System.out.println("Demo");

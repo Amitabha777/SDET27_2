@@ -1,7 +1,9 @@
 package com.crm.autodesk.orgtest;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.crm.autodesk.genericutility.BaseClass;
 import com.crm.autodesk.objectrepository.CreateOrganisationPage;
@@ -9,9 +11,10 @@ import com.crm.autodesk.objectrepository.HomePage;
 import com.crm.autodesk.objectrepository.OrganisationInformationPage;
 import com.crm.autodesk.objectrepository.OrganisationPage;
 
+@Listeners(com.crm.autodesk.genericutility.ListenerImplementation.class)
 public class CreateOrgTest extends BaseClass{
 
-	@Test(groups="smokeSuite")
+	@Test(groups="SmokeSuite")
 	public void createOrg() throws Throwable
 	{
 	
@@ -29,6 +32,9 @@ public class CreateOrgTest extends BaseClass{
 	//Go Into Organization	
 	homePage.clickOnOrganisationsLink();
 	
+	SoftAssert sa= new SoftAssert();
+	//Assert.fail();
+	
 	//Click on Create Organization Button/Image
 	organisationPage.clickOnAddOrganisationLink();
 	
@@ -39,7 +45,7 @@ public class CreateOrgTest extends BaseClass{
 	String headerText=organisationInformationPage.headerText();
 	jLib.verify(headerText, orgName);
 	
-	//Assert.fail();
+	
 	}
 
 }

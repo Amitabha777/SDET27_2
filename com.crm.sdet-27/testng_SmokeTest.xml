@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke_Suite">
+<groups>
+<run>
+<include name="SmokeSuite"></include>
+</run>
+</groups>
+  <test thread-count="5" name="Smoke_Test">
+    <classes>
+      <class name="com.crm.autodesk.concttest.CreateContctTest"/>
+      <class name="com.crm.autodesk.orgtest.CreateOrgWithIndustriesAndType"/>
+      <class name="com.crm.autodesk.concttest.AddContactWithOrganisationAndVerify"/>
+      <class name="com.crm.autodesk.concttest.ContactTC_16"/>
+      <class name="com.crm.autodesk.concttest.ContactTC_15"/>
+      <class name="com.crm.autodesk.orgtest.CreateOrgTest"/>
+    </classes>
+  </test> <!-- Smoke_Test -->
+</suite> <!-- Smoke_Suite -->

@@ -30,7 +30,7 @@ public class BaseClass {
 	
 	
 	public WebDriver driver=null;
-	
+	public static WebDriver sdriver;
 	
 	@BeforeSuite(groups={"smokeSuite","RegressionSuite"})
 	public void dbConnection()
@@ -40,11 +40,12 @@ public class BaseClass {
 	}
 	
 	//@Parameters("browser")
-	@BeforeClass(groups={"smokeSuite","RegressionSuite"})
+	@BeforeClass(groups={"SmokeSuite","RegressionSuite"})
 	public void launchBrowser() throws Throwable
 	{
 		String browser= fLib.getPropertyKeyValue("browser");
 		driver=wLib.crossBroswerHandling(browser);
+		sdriver=driver;
 		String url= fLib.getPropertyKeyValue("url");
 	
 		wLib.invokeImplicitWait(driver);
@@ -53,7 +54,7 @@ public class BaseClass {
 		System.out.println("Browser Launch Successful");
 	}
 	
-	@BeforeMethod(groups={"smokeSuite","RegressionSuite"})
+	@BeforeMethod(groups={"SmokeSuite","RegressionSuite"})
 	public void loginToApp() throws Throwable
 	{
 		String username =fLib.getPropertyKeyValue("username");
@@ -67,7 +68,7 @@ public class BaseClass {
 		System.out.println("Login Successful");		
 	}
 	
-	@AfterMethod(groups={"smokeSuite","RegressionSuite"})
+	@AfterMethod(groups={"SmokeSuite","RegressionSuite"})
 	public void logOutOfApp()
 	{
 		HomePage homePage= new HomePage(driver);
@@ -75,14 +76,14 @@ public class BaseClass {
 		System.out.println("Logout Successful");
 	}
 	
-	@AfterClass(groups={"smokeSuite","RegressionSuite"})
+	@AfterClass(groups={"SmokeSuite","RegressionSuite"})
 	public void closeBrowser()
 	{
 		driver.close();
 		System.out.println("Browser Close Successful");
 	}
 	
-	@AfterSuite(groups={"smokeSuite","RegressionSuite"})
+	@AfterSuite(groups={"SmokeSuite","RegressionSuite"})
 	public void closeDbConnection()
 	{
 		dLib.closeDatabase();

@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.autodesk.orgtest.CreateOrgWithIndustriesAndType">
+      <class name="com.crm.autodesk.concttest.AddContactWithOrganisationAndVerify">
         <methods>
           <include name="logOutOfApp"/>
-          <include name="createOrg"/>
           <include name="loginToApp"/>
+          <include name="contactWithOrganisation"/>
           <include name="dbConnection"/>
           <include name="launchBrowser"/>
           <include name="closeDbConnection"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.crm.autodesk.orgtest.CreateOrgWithIndustriesAndType -->
+      </class> <!-- com.crm.autodesk.concttest.AddContactWithOrganisationAndVerify -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

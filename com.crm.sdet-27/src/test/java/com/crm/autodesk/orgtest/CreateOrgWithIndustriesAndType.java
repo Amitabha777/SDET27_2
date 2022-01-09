@@ -36,7 +36,7 @@ public class CreateOrgWithIndustriesAndType extends BaseClass{
 		//Click on Organizations
 		homePage.clickOnOrganisationsLink();
 		
-		Assert.fail("My Damn Wish");
+		//Assert.fail("My Damn Wish");
 		
 		//Click on Add Organization (+ Sign)
 		organisationPage.clickOnAddOrganisationLink();

@@ -11,5 +11,10 @@ public class TryDate {
 		String date= jLib.getSystemDateAndTime();
 		
 		System.out.println("System Date "+ date);
+		
+		
+		String fDate= jLib.getDateInFormatYYYMMDD();
+		System.out.println("Formatted: "+fDate);
+		
 	}
 }

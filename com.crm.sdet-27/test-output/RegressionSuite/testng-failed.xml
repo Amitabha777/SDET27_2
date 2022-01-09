@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RegressionSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RegresstionTests(failed)">
+    <groups>
+      <run>
+        <include name="RegressionSuite"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.crm.autodesk.orgtest.CreateOrgWithIndustriesAndType">
+        <methods>
+          <include name="logOutOfApp"/>
+          <include name="createOrg"/>
+          <include name="loginToApp"/>
+          <include name="dbConnection"/>
+          <include name="launchBrowser"/>
+          <include name="closeDbConnection"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.crm.autodesk.orgtest.CreateOrgWithIndustriesAndType -->
+    </classes>
+  </test> <!-- RegresstionTests(failed) -->
+</suite> <!-- Failed suite [RegressionSuite] -->
